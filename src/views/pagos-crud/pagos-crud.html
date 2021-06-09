@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update || pago</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../views/pagos-crud/pagos-crud.css" />
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <fieldset>
+                <label >Nombre</label>
+                <input type="text" class="form-control" placeholder="" id="nombre"> </br>
+                <label >Seleccione el mes</label>
+                <select id="mes">
+                    <option value="Enero">Enero</option>
+                    <option value="Febrero">Febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiembre">Septiembre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
+                </select></br>
+                <label >Canon</label>
+                <input type="text" class="form-control"placeholder="" id="canon"></br>
+                <label >¿Tiene iva?</label>
+                <select id="opcion_iva">
+                    <option value="si">si</option>
+                    <option value="no">no</option>
+                </select></br>
+                <label >Administracion</label>               
+                <input type="text" class="form-control" placeholder="" id="admin"></br>
+                <label >¿Tiene retencion de arrendatario?</label>
+                <select id="opcion_retencion_arren">
+                    <option value="si">si</option>
+                    <option value="no">no</option>
+                </select></br>
+                <label >Retencion de iva</label>
+                <input type="text" class="form-control" placeholder="" id="retencion-iva"></br>
+                <label >Retencion de ica</label>
+                <input type="text" class="form-control" placeholder="" id="retencion-ica"></br>
+                <label >¿Tiene retencion de propietario?</label>
+                <select id="opcion_reten_prop">
+                    <option value="si">si</option>
+                    <option value="no">no</option>
+                </select></br>
+                <label >¿Tiene seguro?</label>
+                <select id="opcion_seguro">
+                    <option value="si">si</option>
+                    <option value="no">no</option>
+                </select></br>
+                <label >4Xmil</label>
+                <input type="text" class="form-control" placeholder="" id="4x-mil"></br>
+                <label >Otr. Des</label>
+                <input type="text" class="form-control" placeholder="" id="otros-des"></br>
+                <label >Seleccione fecha</label>
+                <input type="date" class="form-control" placeholder="" id="fecha"></br>
+            </fieldset>
+        </form>
+        <button id="actualizar" class="btn ">Actualizar</button>
+         <button id="eliminar" class="btn ">Eliminar</button>
+    </div>
+</body>
+<script src="../../controllers/pagos-crud.js"></script>
+</html>

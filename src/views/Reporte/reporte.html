@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no,maximus-scale=1.0,minimun-scale=1.0"
+    />
+
+    <title>Form Reporte || Home Reporter</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../views/Reporte/reporte.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarColor03"
+        aria-controls="navbarColor03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="btn btn-block" id="button-go-to-work">Pagos </a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-block" id="button-go-to-ingresos">Ingresos</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-block" id="button-go-to-gastos">Gastos oficina</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-block" id="button-go-to-cuentas">Cuentas</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-block" id="button-go-to-reporte">Reporte</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="input-group">
+        <input type="date" class="form-control" id="fecha-reporte" />
+      </div></br>
+
+      <button id="generar-pdf" class="btn ">Descargar informe</button> 
+    </main>
+    <script type="text/javascript" src="../../controllers/reporte.js"></script>
+    <script
+      type="text/javascript"
+      src="../../controllers/shared/routes.js"
+    ></script>
+  </body>
+</html>

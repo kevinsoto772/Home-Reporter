@@ -1,0 +1,28 @@
+#actualizar {
+    margin-bottom: 20px;
+    width: 40%;
+    background-color:#292A2D ;
+  
+  }
+  #eliminar{
+      width: 40%;
+      margin-bottom: 20px;
+      background-color:rgb(179, 46, 46) ;
+  }
+  #eliminar:hover{
+    background-color:rgb(255, 71, 71);
+    color: white;
+  }
+  
+  #actualizar:hover{
+    background-color:rgb(61, 60, 60);
+    color: white;
+  }
+  
+  #form1 {
+    width: 80%;
+  }
+  label{
+    color: black;
+  }
+  

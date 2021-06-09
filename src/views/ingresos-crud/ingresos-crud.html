@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update || ingresos</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../views/ingresos-crud/ingresos-crud.css" />
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <fieldset>
+                <label >Nombre</label>
+                <input type="text" class="form-control" placeholder="" id="nombre"> </br>
+                <select id="banco">  
+                    <option value="BANCOLOMBIA ****7493">BANCOLOMBIA ****7493</option>
+                    <option value="BANCOLOMBIA ****8463">BANCOLOMBIA ****8463</option>
+                </select></br>  
+                <label >Valor</label>
+                <input type="text" class="form-control"placeholder="" id="valor"></br>
+                <label >Seleccione fecha</label>
+                <input type="date" class="form-control" placeholder="" id="fecha"></br>
+            </fieldset>
+        </form>
+        <button id="actualizar" class="btn ">Actualizar</button>
+         <button id="eliminar" class="btn ">Eliminar</button>
+    </div>
+</body>
+<script src="../../controllers/ingresos-crud.js"></script>
+</html>

@@ -1,0 +1,26 @@
+.navbar{
+    background-color: rgb(179, 46, 46);
+}
+main{
+    padding: 30px 40px;
+}
+main h1{
+    color:rgb(179, 46, 46) ;;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.button-center{
+    display: block;
+    margin: 0 auto;
+    background-color:rgb(179, 46, 46) ;
+}
+
+.background-secondary{
+    background-color: white;
+}
+
+.btn:hover{
+    background-color:rgb(255, 71, 71);
+    color: white;
+}

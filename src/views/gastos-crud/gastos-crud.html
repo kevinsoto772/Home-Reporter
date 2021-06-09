@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update || Gastos</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../views/gastos-crud/gastos-crud.css" />
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <fieldset>
+                <label >Nombre</label>
+                <input type="text" class="form-control" placeholder="" id="nombre"> </br>
+                <label >Concepto</label>
+                <input type="text" class="form-control" placeholder="" id="concepto"> </br>
+                <label>¿Es un impuesto?</label>
+                <select id="opcion_impuesto">
+                    <option value="1">si</option>
+                    <option value="0">no</option>
+                </select></br>     
+                <label >Valor</label>
+                <input type="text" class="form-control"placeholder="" id="valor"></br>
+                <label >Seleccione fecha</label>
+                <input type="date" class="form-control" placeholder="" id="fecha"></br>
+            </fieldset>
+        </form>
+        <button id="actualizar" class="btn ">Actualizar</button>
+         <button id="eliminar" class="btn ">Eliminar</button>
+    </div>
+</body>
+<script src="../../controllers/gastos-crud.js"></script>
+</html>

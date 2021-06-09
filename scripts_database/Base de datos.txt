@@ -1,0 +1,79 @@
+create database home;
+
+use home;
+
+create table usuario(
+id int primary key auto_increment not null ,
+nombre varchar(45) not null,
+contraseña varchar(45) not null,
+correo varchar(100),
+telefono varchar(45)
+);
+
+create table gastos(
+id_gastos int primary key auto_increment not null ,
+nombre varchar(45),
+concepto varchar(200),
+impuesto boolean,
+valor int,
+fecha Date
+);
+
+create table pagos(
+id_pagos int primary key auto_increment not null ,
+nombre varchar(100),
+mes_de_pago varchar(45),
+canon int,
+iva_1 int,
+valor_admin int,
+retencion_arren int,
+retencion_iva int,
+retencion_ica int,
+total_recaudado int,
+comision int,
+iva int,
+retencion_prop int,
+seguro int,
+x4_mil int,
+otros_des int,
+provision_gastos int,
+provision_iva int,
+neto_pagar int,
+fecha Date
+);
+
+create table ingresos(
+id_ingresos int primary key auto_increment not null ,
+arrendatario varchar(45),
+banco varchar(45),
+valor int,
+fecha Date
+);
+
+create table Totales_2(
+id_Totales_2 int primary key auto_increment not null ,
+Total_ingresos int,
+fecha Date
+);
+
+create table Totales_1(
+id_Totales_1 int primary key auto_increment not null ,
+total_comision int,
+total_IVA int,
+total_retencion int,
+total_seguro int,
+total_4_x_mil int,
+total_otros int,
+total_provision_gastos int,
+total_provision_iva int,
+total_neto_pagar int,
+fecha Date
+);
+
+create table Totales_3(
+id_Totales_3 int primary key auto_increment not null ,
+Total_gastos int,
+fecha Date
+);
+
+

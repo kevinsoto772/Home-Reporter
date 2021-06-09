@@ -1,0 +1,51 @@
+.navbar{
+    background-color: rgb(179, 46, 46);
+}
+main input,.btn{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom: 30px;
+}
+#table-1{
+  overflow: scroll;
+}
+th{
+    vertical-align: middle !important;
+    background-color:rgb(54, 53, 53);
+    color: white;
+    cursor:auto;
+}
+tr:nth-child(even){
+    background-color:rgb(230, 230, 230);
+    color: black;
+}
+tr{
+    line-height:15px;
+    cursor: pointer;
+    color: black;
+}
+
+#total{
+text-align:center;
+}
+.navbar{
+    height: 50px;
+}
+.navbar .btn{
+padding-top:20px; 
+margin-left: -8px;
+padding-left: 2px;
+}
+.btn{
+    padding-top: 10px;
+    margin-left:20px;
+    background-color:rgb(179, 46, 46) ;
+}
+
+.btn:hover{
+    background-color:rgb(255, 71, 71);
+    color: white;
+}

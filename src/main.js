@@ -233,6 +233,33 @@ async function ObtenerImpuesto(fecha) {
   return resultado;
 }
 
+async function eliminarTotales1(id) {
+  const conexion = obtenerConeccion();
+  const resultado = (await conexion).query(
+    "DELETE FROM totales_1 WHERE 	id_Totales_1 = ?",
+    [id]
+  );
+  return resultado;
+}
+
+async function eliminarTotales2(id) {
+  const conexion = obtenerConeccion();
+  const resultado = (await conexion).query(
+    "DELETE FROM totales_2 WHERE 	id_Totales_2 = ?",
+    [id]
+  );
+  return resultado;
+}
+async function eliminarTotales3(id) {
+  const conexion = obtenerConeccion();
+  const resultado = (await conexion).query(
+    "DELETE FROM totales_3 WHERE 	id_Totales_3 = ?",
+    [id]
+  );
+  return resultado;
+}
+
+
 // Crear funcion que obtenga totales por dia
 
 // Definir una funcion que obtenga todos los pagos y haga la sumatoria y guarde el valor dentro de total pagos en la fecha correspondiente
@@ -261,5 +288,8 @@ module.exports = {
   obtenerTotales3,
   ingresarTotales3,
   actualizarTotales3,
-  ObtenerImpuesto
+  ObtenerImpuesto,
+  eliminarTotales1,
+  eliminarTotales2,
+  eliminarTotales3
 };

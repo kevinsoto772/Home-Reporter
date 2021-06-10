@@ -101,15 +101,27 @@ async function updatePago(id, date, totales_1){
  /*  const totales_1 = sumatoria(date); */
 
   let result = await main.actualizarTotales1(id, totales_1);
+  console.log(result);
 }
 
+async function eliminarPago(id){
+  /*  const totales_1 = sumatoria(date); */
+ 
+   let result = await main.eliminarTotales1(id);
+   console.log(result);
+ }
+
 async function insertOrUpdatePago(date, totales_1){
+  let pago = await main.obtenerPagos(date);
   let totales_1_actual = await main.obtenerTotales1(date);
-  if(totales_1_actual.length > 0){
+  if(totales_1_actual.length > 0 && pago.length != 0){
     console.log('parametros actualizar', totales_1_actual[0].id_Totales_1, date, totales_1);
     let newTotales_1 = await updatePago(totales_1_actual[0].id_Totales_1, date, totales_1);
     return newTotales_1;
-  }else{
+  }else if(pago.length == 0 && totales_1_actual.length > 0){
+    let newTotales_1 = await eliminarPago(totales_1_actual[0].id_Totales_1);
+    return newTotales_1;
+  } else if(totales_1_actual.length == 0 && pago.length != 0){
     console.log('parametros ingresar', date, totales_1);
     let newTotales_1 = await insertNewPago(date, totales_1);
     return newTotales_1;

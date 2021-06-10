@@ -57,9 +57,17 @@ async function updateIngreso(id, date, totales_2) {
     let result = await main.actualizarTotales2(id, totales_2);
 }
 
+async function eliminarIngreso(id) {
+    /*  const totales_1 = sumatoria(date); */
+
+    let result = await main.eliminarTotales2(id);
+    console.log(result);
+}
+
 async function insertOrUpdatePago(date, totales_2) {
+    let ingreso = await main.obtenerIngresos(date);
     let totales_2_actual = await main.obtenerTotales2(date);
-    if (totales_2_actual.length > 0) {
+    if (totales_2_actual.length > 0 && ingreso.length != 0) {
         console.log(
             "parametros actualizar",
             totales_2_actual[0].id_Totales_2,
@@ -72,7 +80,10 @@ async function insertOrUpdatePago(date, totales_2) {
             totales_2
         );
         return newTotales_2;
-    } else {
+    } else if (ingreso.length == 0 && totales_2_actual.length > 0) {
+        let newTotales_2 = await eliminarIngreso(totales_2_actual[0].id_Totales_2);
+        return newTotales_2;
+    } else if (totales_2_actual.length == 0 && ingreso.length != 0) {
         console.log("parametros ingresar", date, totales_2);
         let newTotales_2 = await insertNewIngreso(date, totales_2);
         return newTotales_2;

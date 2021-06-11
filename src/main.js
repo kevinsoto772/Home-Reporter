@@ -30,6 +30,7 @@ app.on("ready", () => {
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
+      icon: path.join(__dirname, 'electron-builder/icon.ico')
     },
   });
   mainWindow.loadFile("views/index.html");

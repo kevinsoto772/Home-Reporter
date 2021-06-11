@@ -45,7 +45,6 @@ async function insertNewIngreso() {
       limpiarFormulario();
     }
   });
- 
 }
 
 function limpiarFormulario() {
